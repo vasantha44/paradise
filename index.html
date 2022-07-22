@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise</title>
+ <link rel="icon" href="data:image/png;base64,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">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href="custom.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+  <script src="jsFile.js" rel="stylesheet"></script>
+
+</head>
+
+<body>
+  <div class="main">
+  <div class="container-fluid top">
+    <div class="mobile">
+      <i class="fa-solid fa-mobile-screen"></i> +1 5589 55488 55
+    </div>
+    <div class="clock">
+      <i class="fa-regular fa-clock"></i>Mon-Sat: 11AM - 11PM
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+    <div class="container-fluid">
+      <i class="fa-solid fa-bowl-rice" id="icon"></i>
+      <a class="navbar-brand nav_head text-warning" href="#">PaRaDISE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active nav_menu" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav_menu " aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link   nav_menu" aria-current="page" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav_menu" aria-current="page" href="#specials">Specials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav_menu" aria-current="page" href="#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav_menu" aria-current="page" href="#chefs">Chefs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav_menu" aria-current="page" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav_menu " aria-current="page" href="#contact">Contact</a>
+          </li>
+          <a class="btn btn-outline-warning rounded-pill nav_btn " href="#book">Book A TAble</a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide car_banner" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img
+          src="https://media.istockphoto.com/photos/very-stylish-indian-gourmet-restaurant-picture-id1163284610?k=20&m=1163284610&s=612x612&w=0&h=DkDdn5xxvIpgEDOdt_KbAAn73BwjgyA-sLiY_yV7zAo="
+          class="d-block w-100 img_car" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light">Welcome To PaRaDISE Hotel</h5>
+          <p class="text-light">Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img
+          src="https://media.istockphoto.com/photos/happy-group-of-adult-friends-at-an-indian-restaurant-picture-id165888545?k=20&m=165888545&s=612x612&w=0&h=UuSqj1fUjDgmNKtZMJRHIUW6jOIz2gvzuh-VVKfHmt8="
+          class="d-block w-100 img_car" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light">Enjoy with your Family</h5>
+          <p class="text-light">Organize your Parties, Enjoy with u r Family and Friends.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://media.istockphoto.com/photos/delicious-meal-picture-id1295387240?k=20&m=1295387240&s=612x612&w=0&h=1vUrhTi4pIUHCtXRv3jkA6SfPJseyaj2tDCv1io-1e0="
+          class="d-block w-100 img_car" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light">Taste Delicious Food</h5>
+          <p class="text-light">Taste the delicious food and Enjoy the Taste.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <!-------------------------------------------------About----------------------------------------->
+  <div class="container-fluid bg-dark" id="about">
+    <div class="row">
+      <h2 class="head_about">Serving Hygenic Food</h2>
+      <div class="col-lg-6 ">
+      
+        <p class="para_about order-2">The world-famous Paradise brand has its origins in a small Canteen and a Café in a cinema
+          theatre called Paradise in Secunderabad in the Year 1953.
+
+          A small 100-seater restaurant started serving typical Hyderabadi cuisine like Biryani etc. from early Sixties.
+          The Café also used to sell general food items to the people as a one-stop Food Store.
+
+          In 1978, Mr A Hemati took complete charge of the Restaurant from his Father & Uncle and set about renovating
+          the Restaurant to suit the changing social trends and the evolving food habits of people in India.<br />
+
+          In 1983 an Air-cooled multi-cuisine Restaurant called Paradise Persis Family Restaurant and the highly popular
+          Paradise Takeaway came up at Secunderabad.
+          Hyderabadi and biryani are synonymous and Paradise Hotel is a top priority on every Hyderabad visitor’s
+          to-do list. Paradise Circle is where the world comes to have its most popular share of Hyderabadi dum
+          biryani, kebabs and haleem especially during the month of Ramzan. But that’s not all. Located on M.G.Road, one
+          of the busiest roads of the twin cities Hyderabad</p>
+      </div>
+      <div class="col-lg-6 order-1">
+        <img class="img_about" src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/about.jpg">
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------------------------------why our restaurnt------------------------->
+  <h2 class="head_events">Why Choose Our Restaurant</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 div_chef">
+        <i class="fa-solid fa-utensils" id="chef_icon"></i>
+        <h4 class="head_chef">Professional Chefs</h4>
+      </div>
+      <div class="col-lg-3 div_chef">
+        <i class="fa-solid fa-mug-hot" id="chef_icon"></i>
+        <h4 class="head_chef">Delicious Food</h4>
+      </div>
+      <div class="col-lg-3 div_chef">
+        <i class="fa-solid fa-building" id="chef_icon"></i>
+        <h4 class="head_chef">Excellent Infracture</h4>
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------------------Menu------------------------------------------>
+  <div id="menu"></div>
+  <div>
+    <h2 class="head_events">Today's Menu</h2>
+  </div>
+  <div class="nav-container">
+    <div class="nav-buttons">
+      <div class="nav-button"><button class="nv-btn" onclick="veg()" type="button">Vegitarian</button></div>
+      <div class="nav-button"><button class="nv-btn" onclick="non()" type="button">Non-Vegitarian</button></div>
+      <div class="nav-button"><button class="nv-btn" onclick="cakes()" type="button">Cakes</button></div>
+      <div class="nav-button"><button class="nv-btn" onclick="desserts()" type="button">Desserts</button></div>
+
+    </div>
+  </div>
+  <span id="span"></span>
+
+
+
+  <!-------------------------------------------------Special menu------------------------------------------>
+  <div id="specials"></div>
+  <h2 class="head_events">Our Specials</h2>
+  <div id="carouselExampleIndicators" class="carousel slide a" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://media.istockphoto.com/photos/chicken-biryani-spicy-indian-malabar-biryani-hyderabadi-biryani-dum-picture-id1333127675?k=20&m=1333127675&s=612x612&w=0&h=kmsKYXXa9Kcmw21xEABesJhwij3UyepWb2AtUISD2xI="
+          class="  img" alt="...">
+
+        <img
+          src="https://media.istockphoto.com/photos/indian-chicken-65-with-sauce-and-green-onions-and-lemon-closeup-on-picture-id1054370600?k=20&m=1054370600&s=612x612&w=0&h=XU29S1c9jzyxR4p6TuymCthFbgZFSkkeIlsJzkz8tdk="
+          class=" img" alt="...">
+
+        <img
+          src="https://media.istockphoto.com/photos/hands-of-woman-on-table-with-traditional-south-indian-food-thali-with-picture-id815638500?k=20&m=815638500&s=612x612&w=0&h=tXVcdmYks2byGAv-uvIAattSFyize-1rkUc8p44wa6o="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/pav-bhaji-bread-toast-picture-id1391619632?k=20&m=1391619632&s=612x612&w=0&h=DFMGTHZwntGnCeilXrVakaM96oU4VFsxsBjbMgIWRCY="
+          class="  img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://media.istockphoto.com/photos/rasmalai-rossomalai-roshmolai-rasamalei-is-a-very-popular-indian-its-picture-id1318087021?k=20&m=1318087021&s=612x612&w=0&h=Ih1Xby4k31x9RMIPO7bDNo5fq8anxO8En9z4Xaf68IA="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/chocolate-mocha-frappe-whipped-creme-topping-picture-id951396042?k=20&m=951396042&s=612x612&w=0&h=EF4lr4MlU7r2iK43jx63ZGE85YGCzFaPctn9yjoPI7U="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/ferrero-rock-cake-picture-id1214304199?k=20&m=1214304199&s=612x612&w=0&h=I7LHmuphKMcGA9oQd3YBGUrNOGoiSxaAK_VUpDqRbFI="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/cheesecake-picture-id1133789025?k=20&m=1133789025&s=612x612&w=0&h=4kdtG3c92pBKlJcXnaaHw5bEIW7Ee9F8iNGRkhh6zJU="
+          class="  img" alt="...">
+      </div>
+      <div class="carousel-item">
+
+
+        <img
+          src="https://media.istockphoto.com/photos/bowl-full-with-rasgulla-and-pistachios-a-food-table-top-pune-india-picture-id1127496067?k=20&m=1127496067&s=612x612&w=0&h=tQEIb5q0WpuGBjWDyzssbDtmfRYvLdCx_gxGrj9ycPU="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/red-fruit-trifle-tiramisu-parfait-layered-with-whipped-cream-syrup-picture-id1219973476?k=20&m=1219973476&s=612x612&w=0&h=A9vHJe-KyWPLba5cXNkOp_uw2Oa8KvWBNNpjDYD0e4E="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/yogurt-with-granola-berry-fruits-and-chocolate-picture-id959868924?k=20&m=959868924&s=612x612&w=0&h=4BTwx4sbYXey8ShkvL9ZL2s3JOTL-1CFIHHAenRLBy8="
+          class="  img" alt="...">
+        <img
+          src="https://media.istockphoto.com/photos/puran-poli-puranpoli-holige-obbattu-indian-sweet-flatbread-selective-picture-id899048102?k=20&m=899048102&s=612x612&w=0&h=ZZMN5id_qfEUZPoqkO0LDx8au0ER7Zc-4uI9citLhus="
+          class="  img" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-----------------------------------------------------------Events---------------------------------------------------->
+  <div id="events"></div>
+  <h2 class="head_events">Organize Your Events in our Restaurant</h2>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-custom.jpg"class="d-block  img_event" alt="...">
+          </div>
+          <div class="col-lg-6">
+            <h3 class="head_custom">Custom Parties</h3>
+            <h2 class="head_price">199/-</h2>
+            <p class="para_custom">Things to consider while booking Restaurants for Birthday Party in Hyderabad:
+
+              Always go through the ratings and reviews before a birthday party in restaurant but don't completely rely
+              on them. Try visiting the desired restaurants for birthday party near me before you do anything else; so
+              that you get to know about the behaviour of the staff and the quality of the services provided there.
+
+              If you are soon going to celebrate birthday party in Hyderabad, then you must check all the facilities
+              provided at this venue? Is this restaurant to celebrate birthday near me provide separate stalls for
+              guests to celebrate privately, decorators, cocktails and mocktails, DJ and dance floor facilities and so
+              on.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-birthday.jpg" class="d-block img_event" alt="...">
+
+          </div>
+          <div class="col-lg-6">
+            <h3 class="head_custom">Birthday Parties</h3>
+            <h2 class="head_price">299/-</h2>
+            <p class="para_custom">Things to consider while booking Restaurants for Birthday Party in Hyderabad:
+
+              Always go through the ratings and reviews before a birthday party in restaurant but don't completely rely
+              on them. Try visiting the desired restaurants for birthday party near me before you do anything else; so
+              that you get to know about the behaviour of the staff and the quality of the services provided there.
+
+              If you are soon going to celebrate birthday party in Hyderabad, then you must check all the facilities
+              provided at this venue? Is this restaurant to celebrate birthday near me provide separate stalls for
+              guests to celebrate privately, decorators, cocktails and mocktails, DJ and dance floor facilities and so
+              on.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-private.jpg  "
+              class="d-block img_event" alt="...">
+          </div>
+          <div class="col-lg-6">
+            <h3 class="head_custom">Private Parties</h3>
+            <h2 class="head_price">499/-</h2>
+            <p class="para_custom">Things to consider while booking Restaurants for Birthday Party in Hyderabad:
+
+              Always go through the ratings and reviews before a birthday party in restaurant but don't completely rely
+              on them. Try visiting the desired restaurants for birthday party near me before you do anything else; so
+              that you get to know about the behaviour of the staff and the quality of the services provided there.
+
+              If you are soon going to celebrate birthday party in Hyderabad, then you must check all the facilities
+              provided at this venue? Is this restaurant to celebrate birthday near me provide separate stalls for
+              guests to celebrate privately, decorators, cocktails and mocktails, DJ and dance floor facilities and so
+              on.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+ 
+  <!-------------------------------------------------------------Book A Table---------------------------------->
+  <div id="book"></div>
+  <h2 class="head_book">Book A Table</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <input class="input_book" type="text" placeholder="Your Name"><br />
+        <input class="input_book" type="text" placeholder="Date">
+      </div>
+      <div class="col-lg-4">
+        <input class="input_book" type="text" placeholder="Your Email"><br />
+        <input class="input_book" type="text" placeholder=" Time">
+      </div>
+      <div class="col-lg-4">
+        <input class="input_book" type="text" placeholder="Your Phone"><br />
+        <input class="input_book" type="text" placeholder="No. of People">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <textarea placeholder="Message"></textarea>
+  </div>
+  <button class="btn btn-warning nav_btn rounded-pill button_book" type="submit">Book A Table</button>
+
+
+  <!-------------------------------------------------------------Chefs----------------------------------->
+  <div id="chefs"></div>
+  <h2 class="head_chefs">Our Professional Chefs</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="img_chefs"
+          src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/chefs/chefs-1.jpg" />
+        <h5 class="subHead_chef">Walter White</h5>
+        <p class="para_chef">Master Chef</p>
+      </div>
+      <div class="col-lg-4">
+        <img class="img_chefs"
+          src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/chefs/chefs-2.jpg" />
+        <h5 class="subHead_chef">Sarah Jhonson</h5>
+        <p class="para_chef">Patissier</p>
+      </div>
+      <div class="col-lg-4">
+        <img class="img_chefs"
+          src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/chefs/chefs-3.jpg" />
+        <h5 class="subHead_chef">William Anderson</h5>
+        <p class="para_chef">Cook</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------------------------------------------------Gallery--------------------------------------------->
+  <div id="gallery"></div>
+  <h2 class="head_gallery">Some Memorable Moments In Restaurant</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-1.jpg">
+      </div>
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-2.jpg">
+      </div>
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-3.jpg">
+      </div>
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-4.jpg">
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-5.jpg">
+      </div>
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-6.jpg">
+      </div>
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-7.jpg">
+      </div>
+      <div class="col-lg-3 imgDiv_1">
+        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-8.jpg">
+      </div>
+
+    </div>
+  </div>
+  <!------------------------------------------------------------Contact---------------------------------->
+  <div id="contact"></div>
+  <h2 class="head_contact">Contact Us</h2>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15225.507224805915!2d78.3826778!3d17.4416701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbdf2238313a32ace!2sNasuja%20building!5e0!3m2!1sen!2sin!4v1653837781122!5m2!1sen!2sin"
+    width="100%" height="350" style="border:0"></iframe>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 location">
+        <div class="div_loc">
+          <i class="fa-solid fa-location-dot" id="icon_loc"></i>
+          <!-- <h3 class="head_loc">Location:</h3> -->
+          <p class="para_loc">Nasuja building, madhapur</p>
+        </div>
+        <div class="div_loc">
+          <i class="fa-solid fa-envelope" id="icon_email"></i>
+          <!-- <h3 class="head_email">Email:</h3> -->
+          <p class="para_email">mtls@metrolabs.com</p>
+        </div>
+        <div class="div_loc">
+          <i class="fa-solid fa-mobile-screen" id="icon_call"></i>
+          <!-- <h3 class="head_call">Call:</h3> -->
+          <p class="para_call">+91 9876543210</p>
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-20">
+        <input type="text" class="input_contact" placeholder="Your Name" />
+        <input type="text" class="input_contact" placeholder="Your Email" /><br />
+        <input type="text" class="input_contact1" placeholder="Subject" />
+        <textarea class="textarea1" placeholder="Message"></textarea>
+        <button class="btn btn-warning nav_btn rounded-pill btn_send" type="submit">Send Message</button>
+
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------Footer--------------------------->
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-lg-4">
+        <i class="fa-solid fa-bowl-rice" id="icon"></i>
+        <a class="nav_head text-warning" href="#">PaRaDISE</a>
+        <p class="para_foot">Nasuja building, Madhapur, Hyderabad. </p>
+        <p class="para_foot1">Phone: +1 5589 55488 55 <br>
+          Email: info@example.com</p><br>
+        <i class="fa-brands fa-twitter" id="icon_foot"></i>
+        <i class="fa-brands fa-facebook" id="icon_foot"></i>
+        <i class="fa-brands fa-instagram-square" id="icon_foot"></i>
+        <i class="fa-brands fa-youtube" id="icon_foot"></i>
+        <i class="fa-brands fa-skype" id="icon_foot"></i>
+        <i class="fa-brands fa-linkedin-in" id="icon_foot"></i>
+      </div>
+      <div class="col-lg-2">
+        <h6 class="head_foot">Useful Links</h6>
+        <ul class="links">
+          <li><a href="#home" class="link">Home</li></a>
+          <li><a href="#about" class="link">About</li></a>
+          <li><a href="#menu" class="link">Menu</li></a>
+          <li><a href="#specials" class="link">Specials</li></a>
+          <li><a href="#events" class="link">Events</li></a>
+          <li><a href="#chefs" class="link">chefs</li></a>
+          <li><a href="#gallery" class="link">Gallery</li></a>
+          <li><a href="#contact" class="link">Contact</li></a>
+          <li><a href="#book" class="link">Book A Table</li></a>
+
+        </ul>
+      </div>
+      <div class="col-lg-2">
+        <h6 class="head_foot">Our Services</h6>
+        <ul class="links">
+          <li><a href="#" class="link">Vegitarian</li></a>
+          <li><a href="#" class="link">NON-Vegitarian</li></a>
+          <li><a href="#" class="link">Desserts</li></a>
+          <li><a href="#" class="link">IceCreams</li></a>
+          <li><a href="#" class="link">Cakes</li></a>
+          <li><a href="#" class="link">CoolDrinks</li></a>
+          <li><a href="#" class="link">Sweets</li></a>
+
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="head_sub">Subscribe</h6>
+        <div class="sub rounded-pill">
+          <input type="email" class="input_sub" placeholder="Your Email" />
+          <button class="btn btn-warning  rounded-pill btn_sub" type="submit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button onclick="btn()" class="gotop">Top <i class="fa-solid fa-angle-up"></i></button>
+  <p class="copy">© Copyright Restaurantly. All Rights Reserved</p>
+</div>
+</body>
+
+</html>
